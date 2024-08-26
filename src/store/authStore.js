@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/auth/";
+const API_URL = "http://localhost:5000/api/auth";
 axios.defaults.withCredentials = true;
 
 export const useAuthStore = create((set) => ({
@@ -74,7 +74,7 @@ export const useAuthStore = create((set) => ({
     set({ isLoading: true, error: null });
     try {
       const response = await axios.post(
-        `https://jwt-authenctication.onrender.com/verifyEmail`,
+        await axios.post(`${API_URL}/verifyEmail`);
         { code }
       );
       set({

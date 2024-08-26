@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow requests from this origin
+    origin: "https://authentication-n02tfy0pu-abhishek9503s-projects.vercel.app", // Allow requests from this origin
     methods: ["GET", "POST"], // Specify allowed methods
     credentials: true, // If you need to send cookies or other credentials
   })
